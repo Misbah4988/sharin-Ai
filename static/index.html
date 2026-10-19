@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b1220">
+  <meta name="description" content="Sharin AI — a responsive browser-based AI assistant.">
+  <title>Sharin AI</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">◇</div>
+      <div class="brand-copy">
+        <h1>SHARIN <span>AI</span></h1>
+        <p>CRYSTAL DARK GLASS · BROWSER ASSISTANT</p>
+      </div>
+      <div class="status"><i></i><span id="status">Ready</span></div>
+    </header>
+
+    <section class="hero">
+      <div class="eyebrow">YOUR PERSONAL AI ASSISTANT</div>
+      <h2>How can I help <span>you today?</span></h2>
+      <p>Ask a question, explore an idea, or use one of the quick actions.</p>
+    </section>
+
+    <section id="chat" class="chat" aria-live="polite" aria-label="Conversation">
+      <article class="message assistant">
+        <div class="avatar">◇</div>
+        <div class="bubble-wrap"><div class="speaker">SHARIN</div>
+          <div class="bubble">Hello! I'm Sharin, your browser-based AI assistant. Type a message or use the microphone if your browser supports it. <span class="credit">Designed by Misbah Ur Rehman.</span></div>
+        </div>
+      </article>
+    </section>
+
+    <section class="quick-actions" aria-label="Quick actions">
+      <button class="chip" data-prompt="What's the weather?">☼ <span>Weather</span></button>
+      <button class="chip" data-prompt="Introduce yourself">✦ <span>Introduce</span></button>
+      <button class="chip" data-open="https://www.google.com">↗ <span>Google</span></button>
+      <button class="chip" data-open="https://www.youtube.com">▶ <span>YouTube</span></button>
+      <button class="chip" id="downloadText">↓ <span>Download text</span></button>
+    </section>
+
+    <form id="composer" class="composer">
+      <button id="mic" class="icon-button" type="button" aria-label="Use microphone" title="Voice input">🎙</button>
+      <label class="sr-only" for="message">Message Sharin</label>
+      <textarea id="message" rows="1" maxlength="8000" placeholder="Message Sharin..." autocomplete="off"></textarea>
+      <button id="send" class="send-button" type="submit"><span>Send</span> <b>➤</b></button>
+    </form>
+    <div class="footer">
+      <span>AI can make mistakes. Check important information.</span>
+      <label class="voice-toggle"><input type="checkbox" id="speak" checked> Speak replies</label>
+    </div>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

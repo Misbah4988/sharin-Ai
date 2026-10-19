@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sharin-ai
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: LIVEKIT_URL
+        sync: false
+      - key: LIVEKIT_API_KEY
+        sync: false
+      - key: LIVEKIT_API_SECRET
+        sync: false
+      - key: OPENWEATHER_API_KEY
+        sync: false
+      - key: DEFAULT_CITY
+        value: Sargodha
